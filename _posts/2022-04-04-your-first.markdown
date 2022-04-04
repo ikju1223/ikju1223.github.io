@@ -120,9 +120,9 @@ categories: js
 
     // 테이블 id, 왼쪽부터 결합할 행 갯수(ex. 'userTable',5)
     function rowMerge3(tableName, colums){
-            let setTable = $("#"+tableName+" > tbody");                                 // 테이블 호출
-            let totalColums = setTable.find('tr:eq(0)').find('td').length;                  // 전체 행 갯수
-            let totalRow = setTable.find('tr').length;                                 // 전체 열 갯수
+            let setTable = $("#"+tableName+" > tbody");                // 테이블 호출
+            let totalColums = setTable.find('tr:eq(0)').find('td').length;  // 전체 행 갯수
+            let totalRow = setTable.find('tr').length;                        // 전체 열 갯수
             let sameCode = 1;
             if(colums > totalColums){
                colums = totalColums;
@@ -143,11 +143,11 @@ categories: js
                      && ((j == 0) || 
                      		(nextArea.prev('td').attr("sameCode") == thisArea.prev('td').attr("sameCode")))){
                         //console.log(thisText + "  " + nextText);   
-                        nextArea.attr("sameCode", sameCode);      // 상위 dept 병합여부 판별용
-                        nextArea.attr("class", "deleteCode");      // 삭제될 부분 저장
+                        nextArea.attr("sameCode", sameCode);      	// 상위 dept 병합여부 판별용
+                        nextArea.attr("class", "deleteCode");      	// 삭제될 부분 저장
                      }else{
                         //console.log(thisText + "  " + nextText);
-                        thisArea.attr("sameCode", sameCode);      // 다를경우 중단후 rowpan부여, sameCode 값 증가
+                        thisArea.attr("sameCode", sameCode);      	// 다를경우 중단후 rowpan부여, sameCode 값 증가
                         thisArea.attr("rowspan", i);
                         k = k + i - 1;
                         sameCode = sameCode + 1;
@@ -179,24 +179,24 @@ categories: js
                if((nextArea.text() == thisArea.text()) && 
                	((j == 0) || (nextArea.prev('td').attr("sameCode") == 
                 	thisArea.prev('td').attr("sameCode")))){
-                  nextArea.attr("sameCode", sameCode);      // 상위 dept 병합여부 판별용
-                  nextArea.attr("class", "deleteCode");      // 삭제될 부분 저장
+                  nextArea.attr("sameCode", sameCode);      			// 상위 dept 병합여부 판별용
+                  nextArea.attr("class", "deleteCode");      			// 삭제될 부분 저장
                   i++;
                }else{
-                  thisArea.attr("sameCode", sameCode);      // 다를경우 중단후 rowpan부여, sameCode 값 증가
+                  thisArea.attr("sameCode", sameCode);      			// 다를경우 중단후 rowpan부여, sameCode 값 증가
                   thisArea.attr("rowspan", i);
-                  k = k + i;                        // 삭제될 부분 넘어가기
+                  k = k + i;                        				// 삭제될 부분 넘어가기
                   if(k >= (setTable.find('tr').length-1)){
                      k = 0;
                      j++;
                   }
                   if(j >= colums)
                      break;               
-                  i = 1;                              // 비교될 부분 다음 값을 초기화
+                  i = 1;                              				// 비교될 부분 다음 값을 초기화
                   sameCode = sameCode + 1;
                }               
             }               
-            $('.deleteCode').remove();   // 삭제
+            $('.deleteCode').remove();   					// 삭제
             $("td").removeAttr("samecode");
          }
 
@@ -219,10 +219,10 @@ categories: js
               }else{
                   colums = colum;
               }
-             let setTable = $("#"+tableName+" > tbody");			// 테이블 호출
-             let totalRow = setTable.find('tr').length;				// 전체 열 갯수
-             let sameCode = 1;										// 상위 dept 병합 여부 판별 번호			
-             let PrevTd = 0;										// 이전 Td 위치
+             let setTable = $("#"+tableName+" > tbody");		// 테이블 호출
+             let totalRow = setTable.find('tr').length;		// 전체 열 갯수
+             let sameCode = 1;				// 상위 dept 병합 여부 판별 번호			
+             let PrevTd = 0;					// 이전 Td 위치
              for(const j of colums){
                 for(let k = 0; k < totalRow; k++){ 
                    let thisTr = setTable.find('tr:eq('+ k +')')		// 비교될 값
@@ -238,7 +238,7 @@ categories: js
                       	상위 dept가 병합되어있는(혹은 상위 dept가 없는경우) 경우만 같은 요소로 취급
                       if((nextText == thisText) 
                     		&& ((PrevTd == 0) 
-                    			|| (nextTr.find('td:eq('+ PrevTd +')').attr("sameCode") 															==	thisTr.find('td:eq('+ PrevTd +')').attr("sameCode")))){
+                    			|| (nextTr.find('td:eq('+ PrevTd +')').attr("sameCode") == thisTr.find('td:eq('+ PrevTd +')').attr("sameCode")))){
                          //console.log(thisText + "  " + nextText);   
                          nextArea.attr("sameCode", sameCode);      // 상위 dept 병합여부 판별용
                          nextArea.attr("class", "deleteCode");      // 삭제될 부분 저장
