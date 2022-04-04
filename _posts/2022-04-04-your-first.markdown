@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'js(jquery, html) 세로 줄 병합'
-published: false
+title: "js(jquery, html) 세로 줄 병합"
+published: true
 categories: js
 ---
 
