@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "js(jquery, html) 세로 줄 병합"
+title: 'js(jquery, html) 세로 줄 병합'
 published: true
 categories: js
 ---
@@ -237,7 +237,7 @@ categories: js
                       // 비교 대상이 같고, 
                       	상위 dept가 병합되어있는(혹은 상위 dept가 없는경우) 경우만 같은 요소로 취급
                       if((nextText == thisText) 
-                    		&& ((PrevTd == 0) 
+                    		&& ((j == colums[0]) 
                     			|| (nextTr.find('td:eq('+ PrevTd +')').attr("sameCode") == thisTr.find('td:eq('+ PrevTd +')').attr("sameCode")))){
                          //console.log(thisText + "  " + nextText);   
                          nextArea.attr("sameCode", sameCode);      // 상위 dept 병합여부 판별용
