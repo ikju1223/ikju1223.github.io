@@ -57,6 +57,7 @@ categories: HTTP
 - 리소스의 URI가 일시적으로 변경
 - 302 Found
 -리다이렉트시 요청 메서드가 GET으로 변하고, 본문이 제거될 수 있음
+-원칙은 변하지 않지만 많은 브라우저들이 GET 방식으로 적용받음
 - 307 Temporary Redirect
 -리다이렉트시 요청 메서드와 본문 유지
 - 303 See Other 
