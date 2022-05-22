@@ -2,7 +2,7 @@
 layout: post
 title: HTTP 메서드
 published: true
-categories: js
+categories: HTTP
 ---
 ## HTTP 상태코드
 
