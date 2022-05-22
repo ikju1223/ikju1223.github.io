@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title: HTTP 메서드
+published: true
+categories: HTTP
 ---
 ## HTTP 상태코드
 ## API URI 고민
