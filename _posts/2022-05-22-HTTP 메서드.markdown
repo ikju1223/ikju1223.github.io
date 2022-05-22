@@ -5,6 +5,10 @@ published: true
 categories: js
 ---
 ## HTTP 상태코드
+
+## URI 기본형태 
+foo://example.com:8042/over/there?name=ferret#nose
+
 ## API URI 고민
 ### 리소스의 의미
 - 회원을 등록하고 수정하고 조회하는게 리소스가 아님
