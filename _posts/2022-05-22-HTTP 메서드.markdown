@@ -7,7 +7,7 @@ categories: js
 ## HTTP 상태코드
 
 ## URI 기본형태 
-foo://example.com:8042/over/there?name=ferret#nose
+- foo://example.com:8042/over/there?name=ferret#nose
 
 ## API URI 고민
 ### 리소스의 의미
