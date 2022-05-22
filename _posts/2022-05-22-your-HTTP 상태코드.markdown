@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title: 'HTTP 상태코드'
+published: true
+categories: js
 ---
 ## HTTP 상태코드
 ## 상태코드
