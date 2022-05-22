@@ -2,7 +2,7 @@
 layout: post
 title: HTTP 메서드
 published: true
-categories: HTTP
+categories: js
 ---
 ## HTTP 상태코드
 ## API URI 고민
