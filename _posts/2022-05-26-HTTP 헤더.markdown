@@ -205,6 +205,7 @@ Content-Range: bytes 1001-2000 / 2000
 - 클라이언트는 서버로 부터 
 
 		set-cookie: sessionId=abcde1234; expires=Sat, 26-Dec-2020 00:00:00 GMT; path=/; domain=.google.com; Secure
+        
 값을 받을경우 해당 값을 쿠키 저장소에 저장해둔후 매 요청시마다 해당 값을 보냄
 -  사용자 로그인 세션 관리, 광고 정보 트래킹
 - 네트워크 트래픽 추가 유발, 최소한의 정보만 사용(세션 id, 인증 토큰)
