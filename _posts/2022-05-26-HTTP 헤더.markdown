@@ -5,8 +5,8 @@ published: true
 categories: HTTP
 ---
 
-#HTTP 헤더
-###기본형태
+# HTTP 헤더
+### 기본형태
 header-field = field-name ":" OWS field-value OWS (OWS 띄어쓰기)
 
 	HTTP/1.1 200 OK
