@@ -9,14 +9,14 @@ categories: HTTP
 ###기본형태
 header-field = field-name ":" OWS field-value OWS (OWS 띄어쓰기)
 
-HTTP/1.1 200 OK
+	HTTP/1.1 200 OK
 
     Content-Type: text/html;charset=UTF-8
     Content-Length: 3423			 	  
 
-<html>
- <body>...</body>
-</html>
+    <html>
+     <body>...</body>
+    </html>
 
 ### 용도
 - HTTP 전송에 필요한 부가정보
