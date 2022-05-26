@@ -101,6 +101,7 @@ Content-Encoding: gzip
     World
     0
     \r\n
+    
 - 사이즈를 지정 안됨
 
 ### 범위전송
