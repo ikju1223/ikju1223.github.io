@@ -163,7 +163,7 @@ Content-Range: bytes 1001-2000 / 2000
 - 하나의 IP  주소에 여러 도메인이 적용되어 있을 때
 - host를 명시함으로서 한서버가 가상 호스팅이 가능함
 
-### Locatio
+### Location
 - 페이지 리다이렉션
 - 웹 브라우저는 3xx  응답의 결과에 Location  헤더가  있으면, Location  위치로  자동  이동(리다이렉트) 
 - 응답코드 3xx에서 설명
@@ -171,23 +171,39 @@ Content-Range: bytes 1001-2000 / 2000
 - 3xx (Redirection): Location  값은  요청을  자동으로  리디렉션하기  위한  대상  리소스를 가리킴
 
 ### Allow
-- 허용 가능한 HTTP  메서드
-- 405 (Method Not Allowed)  에서  응답에  포함해야함
+- 허용 가능한 HTTP  메서드를 명시
+- 405 (Method Not Allowed) 에서  응답에  포함해야함
 - Allow: GET, HEAD, PUT
-@@ 추가설명 필요
+
 
 ### Retry-After
 - 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
 - 503 (Service Unavailable):  서비스가  언제까지  불능인지  알려줄  수  있음
 - Retry-After: Fri, 31 Dec 1999 23:59:59 GMT (날짜  표기) 
 - Retry-After: 120 (초단위  표기)
-@@ 추가 설명 필요
+- 점검시 사용
 
 ## 인증
 - Authorization:  클라이언트  인증  정보를  서버에  전달
 - WWW-Authenticate:  리소스  접근시  필요한  인증  방법 정의
 
-@@ 보충 설명 필요
-Authorization: Basic xxxxxxxxxxxxxxxx
 
-리소스 접근시 필요한 인증 방법 정의• 401 Unauthorized  응답과  함께  사용• WWW-Authenticate: Newauth realm="apps", type=1,                                   title="Login to \"apps\"", Basic realm="simple"
+		Authorization: Basic xxxxxxxxxxxxxxxx
+### WWW-Authenticate
+리소스 접근시 필요한 인증 방법 정의
+-401 Unauthorized  응답과  함께  사용
+		
+        WWW-Authenticate: Newauth realm="apps", type=1,                                   title="Login to \"apps\"", Basic realm="simple"
+        
+## 쿠키 
+- Set-Cookie: 서버에서 클라이언트로 쿠키 전달(응답)
+- Cookie: 클라이언트가 서버에서 받은 쿠키를 저장하고, HTTP 요청시 서버로 전달
+- 기존 방식으로는 매번 클라이언트가 값을 포함해줘야됬음
+- 클라이언트는 서버로 부터 
+
+		set-cookie: sessionId=abcde1234; expires=Sat, 26-Dec-2020 00:00:00 GMT; path=/; domain=.google.com; Secure
+값을 받을경우 해당 값을 쿠키 저장소에 저장해둔후 매 요청시마다 해당 값을 보냄
+-  사용자 로그인 세션 관리, 광고 정보 트래킹
+- 네트워크 트래픽 추가 유발, 최소한의 정보만 사용(세션 id, 인증 토큰)
+- 보안에 민감한 데이터는 저장하면 안됨(주민번호, 신용카드 번호 등등)
+
