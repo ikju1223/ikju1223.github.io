@@ -10,10 +10,10 @@ categories: HTTP
 header-field = field-name ":" OWS field-value OWS (OWS 띄어쓰기)
 
 HTTP/1.1 200 OK
-|-------------------------------------|
-|Content-Type: text/html;charset=UTF-8|
-|Content-Length: 3423			 	  |
-|-------------------------------------|
+
+    Content-Type: text/html;charset=UTF-8
+    Content-Length: 3423			 	  
+
 <html>
  <body>...</body>
 </html>
