@@ -74,7 +74,7 @@ header-field = field-name ":" OWS field-value OWS (OWS 띄어쓰기)
 		GET /event Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 text/*;q=0.3,  text/html;q=0.7,  text/html;level=1, text/html;level=2;q=0.4,  */*;q=0.5
 
 |Media Type |Quality|
-|----------|-------|
+|----------|-------:|
 |Value text/html;level=1| 1|
 |text/html| 0.7|
 |text/plain |0.3|
