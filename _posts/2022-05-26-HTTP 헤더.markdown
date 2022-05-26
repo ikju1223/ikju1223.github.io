@@ -190,6 +190,7 @@ Content-Range: bytes 1001-2000 / 2000
 
 
 		Authorization: Basic xxxxxxxxxxxxxxxx
+        
 ### WWW-Authenticate
 리소스 접근시 필요한 인증 방법 정의
 -401 Unauthorized  응답과  함께  사용
