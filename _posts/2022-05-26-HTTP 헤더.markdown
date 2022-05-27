@@ -237,10 +237,12 @@ Content-Range: bytes 1001-2000 / 2000
 ### Secure
 - 쿠키는 http, https를 구분하지 않고 전송
 - Secure를 적용하면 https인 경우에만 전송
+
 ### HttpOnly
 - XSS 공격 방지
 - 자바스크립트에서 접근 불가(document.cookie)
 - HTTP 전송에만 사용
+
 ### SameSite
 - XSRF 공격 방지
 - 요청 도메인과 쿠키에 설정된 도메인이 같은 경우만 쿠키 전송
