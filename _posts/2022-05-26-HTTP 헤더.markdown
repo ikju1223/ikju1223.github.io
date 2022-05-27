@@ -71,7 +71,7 @@ header-field = field-name ":" OWS field-value OWS (OWS 띄어쓰기)
 
 
 
-		GET /event Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 text/*;q=0.3,  text/html;q=0.7,  text/html;level=1, text/html;level=2;q=0.4,  */*;q=0.5
+		GET /event Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7, text/*;q=0.3,  text/html;q=0.7,  text/html;level=1, text/html;level=2;q=0.4,  */*;q=0.5
 
 |Media Type |Quality|
 |----------|-------:|
@@ -112,8 +112,8 @@ Content-Range: bytes 1001-2000 / 2000
 - From:  유저  에이전트의 이메일 정보
 - Referer:  이전  웹  페이지  주소
 - User-Agent:  유저  에이전트  애플리케이션 정보
--Server:  요청을  처리하는  오리진 서버의 소프트웨어 정보
--Date:  메시지가  생성된 날짜
+- Server:  요청을  처리하는  오리진 서버의 소프트웨어 정보
+- Date:  메시지가  생성된 날짜
 
 ### From
 - 유저 에이전트의 이메일 정보
@@ -148,6 +148,7 @@ Content-Range: bytes 1001-2000 / 2000
 - 메시지가 발생한 날짜와 시간
 
 		Date: Tue, 15 Nov 1994 08:12:31 GMT 
+        
 - 응답에서 사용
 
 ## 특별한 정보
