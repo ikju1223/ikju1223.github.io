@@ -23,7 +23,7 @@ header-field = field-name ":" OWS field-value OWS (OWS 띄어쓰기)
 - 많은 표준 헤더가 있음
 - 필요시 임의의 헤더 추가가능
 
-## RFC2616(과거, 패기됨, 4개로 분류)
+## RFC2616(과거, 폐기됨, 4개로 분류)
 - General 헤더: 메시지 전체에 적용되는 정보, 예) Connection: close
 - Request 헤더: 요청 정보, 예) User-Agent: Mozilla/5.0 (Macintosh; ..)
 - Response 헤더: 응답 정보, 예) Server: Apache
@@ -334,4 +334,3 @@ Content-Range: bytes 1001-2000 / 2000
 - must-revalidate는 캐시 유효 시간이라면 캐시를 사용함
 4.Pragma: no-cache 
 - HTTP 1.0 하위 호환
-
