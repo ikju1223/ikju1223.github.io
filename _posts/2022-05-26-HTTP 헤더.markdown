@@ -233,6 +233,7 @@ Content-Range: bytes 1001-2000 / 2000
 ### path=/home
 - 이 경로를 포함한 하위 경로 페이지만 쿠키 접근
 
+## 쿠키 보안
 ### Secure
 - 쿠키는 http, https를 구분하지 않고 전송
 - Secure를 적용하면 https인 경우에만 전송
